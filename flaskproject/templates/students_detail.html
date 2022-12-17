@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ students.name }}
+{% endblock %}
+    
+{% block body %}
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <hr class="polosa-1">
+      <h5 class="card-title">❖{{ students.id }}❖</h5>
+      <hr class="polosa-2">
+      <p class="card-text">{{ students.name }}</p>
+    </div>
+  </div>
+  <a href="/students/{{ students.id }}/update" class="btn-redact">Редактировать</br>
+  <a href="/students/{{ students.id }}/delete" class="btn-delete">Удалить</a>
+{% endblock %}

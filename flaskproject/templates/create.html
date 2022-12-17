@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}
+Создание студента
+{% endblock %}
+
+{% block body %}
+<form method="post">
+    <textarea name="name" id="name" class = "form-input" placeholder = "Введите имя"></textarea><br>
+    <input type="submit" class = "btn-create" value = "Создать"><br>
+</form>    
+{% endblock %}

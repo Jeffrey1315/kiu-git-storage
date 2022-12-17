@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+Все студенты
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    {% if students|length > 0 %}
+        {% for el in students %}
+        <div class="info">
+            <h2 class="info-id">❖{{ el.id }}<br>
+            <p class="info-name">{{ el.name }}</p>
+        </div>
+        <a href = "/students/{{ el.id }}" class = "btn-detail">Детальнее</a>
+        {% endfor %}
+    {% else %}
+    <p class="info-n">❖ Никого нет ❖</p>
+    {% endif %}
+</div>
+{% endblock %}
